@@ -4,7 +4,7 @@
 
 ## Overview
 
-This replication package contains the scripts required to replicate the results of the paper *"Careers in Multinational Enterprises"* by Marcus Roesch, Michiel Gerritse, and Bas Karreman. Due to the confidential nature of the data, the analyses must be executed on the servers of Statistics Netherlands (CBS). For more details on accessing the data, see "Source Data Access."
+This replication package contains the scripts required to replicate the results of the paper *"Careers in Multinational Enterprises"* by Marcus Roesch, Michiel Gerritse, and Bas Karreman. Due to the confidential nature of the data, the analyses must be executed on the servers of Statistics Netherlands (CBS). For more details on accessing the data, see "Source data access."
 
 ## Folder structure
 
