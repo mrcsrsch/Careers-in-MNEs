@@ -28,7 +28,7 @@ This replication package contains the scripts required to replicate the results 
 6. Result tables and figures will be saved in the `outputs/` folder.
 7. **Important**: Running the full analysis, especially the bootstraps, may take several days. We recommend running the scripts in stages while monitoring closely. 
 
-### Software and hardware Requirements
+### Software and hardware requirements
 
 - **R version >= 4.0.0**
 - **Stata version >= 17.0** (for Appendix B)
@@ -36,7 +36,7 @@ This replication package contains the scripts required to replicate the results 
 - Important R-packages: data.table, fixest, ggplot2 
 - Important Stata packages: estquant
 
-## Source Data Access
+## Source data access
 
 This project uses confidential datasets provided by Statistics Netherlands (CBS). The specific datasets are:
 
@@ -47,7 +47,7 @@ This project uses confidential datasets provided by Statistics Netherlands (CBS)
 - **DIPLOMAHOTAB** (HO/WO graduations): 2004 - 2020
 - **DIPLOMAMBOTAB** (MBO graduations): 2004 - 2020
 
-### Firm-level Datasets
+### Firm-level datasets
 - **Uci** (Ultimate controlling institutional unit): 2006 - 2021
 - **Sfgo** (Foreign subsidiaries): 2006 - 2009
 - **Multinationals** (Domestic Multinationals): 2010 - 2021
@@ -60,6 +60,6 @@ Due to confidentiality, we cannot share the data directly. To replicate the anal
 
 To request access, please contact CBS at [microdata@cbs.nl](mailto:microdata@cbs.nl).
 
-### Important Notes
+### Important note
 
 We had employee access to CBS data, which did not require requesting data through the Microdata Service. However, to the best of our knowledge, the analyses can be replicated using the CBS Microdata Service. If any of the individual datasets are incomplete or unavailable through the Microdata Service, please contact CBS at [microdata@cbs.nl](mailto:microdata@cbs.nl) with your specific request.
