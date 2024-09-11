@@ -1,4 +1,4 @@
-# Replication Package for 'Careers in Multinational Enterprises'"
+# Replication Package for 'Careers in Multinational Enterprises'
 
 **Last update: Sep 11, 2024**
 
