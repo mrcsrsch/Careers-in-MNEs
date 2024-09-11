@@ -44,7 +44,7 @@ saveRDS(beidkenmerken, file=paste0(map_data_analysis, "step1/company/nace.rds"))
 
 rm(beidkenmerken)
 ##################################################################################
-##### company groups BEIDs ######
+##### company groups BEIDs (Note: this is sometimes also called OND_ID instead of OG_ID) ######
 # retrieve company groups of firm IDs
 
 query <- paste0(
@@ -97,7 +97,7 @@ foreign[, c("OG_BEID") := NULL]
 ###### Domestic MNEs ######
 # Impute values for 2006-2009. Already imputed for 2020-2021 in MNEs data set. 
 
-# get list of MNEs (2010-2021)
+# get list of MNEs from KIO teams database (2010-2021)
 query <- paste0("
                 SELECT *
                 FROM [Data].[Multinationals]
@@ -110,7 +110,7 @@ dutch <- MNEs[NED_MUL==TRUE, !c("BUI_MUL")]
 rm(MNEs)
 
 ## Impute years 2006-2009
-# For large firms (in SFGO), we can use the SFGO (2006 - 2009). Note that this overestimates Dutch MNEs by 10-20% (see Tim's email)
+# For large firms (in SFGO), we can use the SFGO (2006 - 2009)
 SFGO <- list()
 k <- 0
 for (year in 2006:2009){
