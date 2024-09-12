@@ -1,15 +1,15 @@
 # Replication Package for 'Careers in Multinational Enterprises'
 
-**Last update: Sep 11, 2024**
+**Last update: Sep 12, 2024**
 
 ## Overview
 
-This replication package contains the scripts required to replicate the results of the paper *"Careers in Multinational Enterprises"* by Marcus Roesch, Michiel Gerritse, and Bas Karreman. Due to the confidential nature of the data, the analyses must be executed on the servers of Statistics Netherlands (CBS). For more details on accessing the data, see "Source data access."
+This replication package contains the scripts required to replicate the results of the paper *"Careers in Multinational Enterprises"* by Marcus Roesch, Michiel Gerritse, and Bas Karreman. Due to the confidential nature of the data, the analyses must be executed on the servers of Statistics Netherlands (CBS). For more details on accessing the data, see "source data access."
 
 ## Folder structure
 
 - `scripts/`: Contains R and Stata code to run the analysis.
-- `source_data/`: Place the confidential source data files here (see "Source Data Access").
+- `source_data/`: Place the confidential source data files here (see "source data access").
 - `data/`: Stores intermediate datasets created during the analysis.
 - `outputs/`: Result figures and tables for the paper will be saved here.
 
@@ -48,9 +48,9 @@ This project uses confidential datasets provided by Statistics Netherlands (CBS)
 - **DIPLOMAMBOTAB** (MBO graduations): 2004 - 2020
 
 ### Firm-level datasets
-- **Uci** (Ultimate controlling institutional unit): 2006 - 2021
-- **Sfgo** (Foreign subsidiaries): 2006 - 2009
-- **Multinationals** (Domestic Multinationals): 2010 - 2021
+- **Uci** (ultimate controlling institutional unit): 2006 - 2021
+- **Sfgo** (foreign subsidiaries): 2006 - 2009
+- **Multinationals** (foreign and domestic multinationals): 2010 - 2021
 - **Abr** (company group IDs): 2006 - 2021
 - **Abr_regio** (locations of firms): 2006 - 2021
 - **Abr_pab** (NACE industry codes): 2006 - 2021
@@ -62,4 +62,4 @@ To request access, please contact CBS at [microdata@cbs.nl](mailto:microdata@cbs
 
 ### Important note
 
-We had employee access to CBS data, which did not require requesting data through the Microdata Service. However, to the best of our knowledge, the analyses can be replicated using the CBS Microdata Service. If any of the individual datasets are incomplete or unavailable through the Microdata Service, please contact CBS at [microdata@cbs.nl](mailto:microdata@cbs.nl) with your specific request.
+We had employee access to CBS data, which did not require requesting data through the Microdata Service. However, to the best of our knowledge, with the code provided here the analyses can be replicated with Microdata Service access. If any of the individual datasets are incomplete or unavailable through the Microdata Service, please contact CBS at [microdata@cbs.nl](mailto:microdata@cbs.nl) with your specific request.
