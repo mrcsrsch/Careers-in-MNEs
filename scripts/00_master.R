@@ -1,5 +1,10 @@
 ##################################################################################
 ##### Careers in Multinational Enterprises, master script ########################
+# This script loads global settings and
+# sources all other scripts in the folder to 
+# i) build the analysis dataset
+# ii) run the analysis and robustness checks
+# Setting "run.scripts" to TRUE will execute the full project.
 ##################################################################################
 ##################################################################################
 
@@ -222,7 +227,72 @@ if (run.scripts){
   ###########################################################################################################
 
   ### 04 Robustness checks ####
+
+  #### Base salary ####
+  start.part()
+  source(paste0(map_scripts, "07_rob_base_salary.R"), echo=TRUE, verbose = FALSE, max.deparse.length = 100000, spaced = TRUE)
+  end.part()
+  rm(list=objs); gc()
+
+  #### Excluding acquisitions ####
+  start.part()
+  source(paste0(map_scripts, "07_rob_excluding acquisitions.R"), echo=TRUE, verbose = FALSE, max.deparse.length = 100000, spaced = TRUE)
+  end.part()
+  rm(list=objs); gc()
+
+  #### Large firms ####
+  start.part()
+  source(paste0(map_scripts, "07_rob_large_firms.R"), echo=TRUE, verbose = FALSE, max.deparse.length = 100000, spaced = TRUE)
+  end.part()
+  rm(list=objs); gc()
+
+  #### Discounting experience ####
+  start.part()
+  source(paste0(map_scripts, "07_rob_discounting_experience.R"), echo=TRUE, verbose = FALSE, max.deparse.length = 100000, spaced = TRUE)
+  end.part()
+  rm(list=objs); gc()
+
+  #### MNE vs industry experience ####
+  start.part()
+  source(paste0(map_scripts, "07_rob_industry_experience.R"), echo=TRUE, verbose = FALSE, max.deparse.length = 100000, spaced = TRUE)
+  end.part()
+  rm(list=objs); gc()
+
+  #### MNE vs location-specific experience ####
+  start.part()
+  source(paste0(map_scripts, "07_rob_location_experience.R"), echo=TRUE, verbose = FALSE, max.deparse.length = 100000, spaced = TRUE)
+  end.part()
+  rm(list=objs); gc()
   
+  #### Bargaining ####
+  start.part()
+  source(paste0(map_scripts, "07_rob_bargaining.R"), echo=TRUE, verbose = FALSE, max.deparse.length = 100000, spaced = TRUE)
+  end.part()
+  rm(list=objs); gc()
+
+  #### Firm-year fixed effects + Spell fixed effects ####
+  start.part()
+  source(paste0(map_scripts, "07_rob_firmyear_spell.R"), echo=TRUE, verbose = FALSE, max.deparse.length = 100000, spaced = TRUE)
+  end.part()
+  rm(list=objs); gc()
+
+  #### Foreign vs. domestic MNEs ####
+  start.part()
+  source(paste0(map_scripts, "07_rob_FMNE_DMNE.R"), echo=TRUE, verbose = FALSE, max.deparse.length = 100000, spaced = TRUE)
+  end.part()
+  rm(list=objs); gc()
+
+  #### Across firm returns by firm type ####
+  start.part()
+  source(paste0(map_scripts, "07_rob_across_by_firm_type.R"), echo=TRUE, verbose = FALSE, max.deparse.length = 100000, spaced = TRUE)
+  end.part()
+  rm(list=objs); gc()
+
+  #### Limited mobility bias ####
+  start.part()
+  source(paste0(map_scripts, "07_rob_limited_mobility.R"), echo=TRUE, verbose = FALSE, max.deparse.length = 100000, spaced = TRUE)
+  end.part()
+  rm(list=objs); gc()
   
   # save timers
   saveRDS(ttimers, file=paste0(map_data_analysis, "project_timers.rds"))

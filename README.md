@@ -17,7 +17,7 @@ This replication package contains the scripts required to replicate the results 
 
 ### Data preparation
 1. Place the worker-level source data in the `source_data/` folder.
-2. Specify the SQL server connection for the firm-level source data in the `01_company_data.R` script (see comments in the script for guidance).
+2. Specify the SQL server connection for the firm-level source data in the `01_company_data.R` and `07_rob_location_experience.R` scripts (see comments in the scripts for guidance).
 3. Adjust the file paths in `00_main.R` to match your directory structure.
 
 ### Run analysis 
