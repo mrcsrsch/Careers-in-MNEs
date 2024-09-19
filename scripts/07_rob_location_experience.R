@@ -27,13 +27,13 @@ map_output_here <- paste0(map_output, "robustness/location_exp/") # for final ou
 
 #### load data  ####
 # main regression table
-reg.table <- readRDS(paste0(map_data_paper2, "step3/POLIS_graduates_connected.rds")) 
+reg.table <- readRDS(paste0(map_data_analysis, "step3/POLIS_graduates_connected.rds")) 
 # Full wage date
-#POLIS <- readRDS(paste0(map_data_paper2, "step2/POLIS.rds")) # POLIS
+#POLIS <- readRDS(paste0(map_data_analysis, "step2/POLIS.rds")) # POLIS
 # MNE and nace industries on OG level
-#OGs <-readRDS(paste0(map_data_paper2, "step2/OG_company_types.rds"))
+#OGs <-readRDS(paste0(map_data_analysis, "step2/OG_company_types.rds"))
 # load OG_BEID, SBEID translation
-OG_SBEIDs <- readRDS(paste0(map_data_paper2, "step2/OGBEID_SBEID_translation.rds"))
+OG_SBEIDs <- readRDS(paste0(map_data_analysis, "step2/OGBEID_SBEID_translation.rds"))
 
 ##################################################################################
 ##################################################################################
@@ -81,7 +81,7 @@ regiobase <- regiobase[!is.na(local_workers), !c("WPactueel", "Verdeelperc_LBE")
 regiobase <- regiobase[!is.na(PC6),]
 
 # add NUTS2 regions, drop non-matched regions (NUTS2 is province)
-pc6_nuts2 <- fread(paste0(map_data_paper2, "input/pc2020_NL_NUTS-2021_v1.0.csv"))
+pc6_nuts2 <- fread(paste0(map_data_source, "LOCATION/pc2020_NL_NUTS-2021_v1.0.csv"))
 # extract NUTS2 and postcodes
 pc6_nuts2[, NUTS2 := substr(NUTS3,2,5)]
 pc6_nuts2[, PC6 := paste0(substr(CODE, 2, 5), paste0(substr(CODE, 7, 8)))]

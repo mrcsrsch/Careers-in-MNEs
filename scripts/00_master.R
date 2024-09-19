@@ -27,9 +27,9 @@ main_path <- NA
 if (is.na(main_path)) warning("You need to set the main folder path.")
 
 ## set paths
-map_data_source <- paste0(main_path, "source_data/")
 map_scripts <- paste0(main_path, "scripts/")
 map_data_analysis <- paste0(main_path, "data/")
+map_data_source <- paste0(map_data_analysis, "source_data/")
 map_output <-  paste0(main_path, "outputs/")
 
 ## create data and output paths if necessary

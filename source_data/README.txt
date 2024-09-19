@@ -1,1 +1,0 @@
-Place the source files in this folder. See overall Readme. 

@@ -11,14 +11,14 @@ if (!dir.exists(paste0(map_data_analysis, "step1/"))) dir.create(paste0(map_data
 ##################################################################################
 ##################################################################################
 ##### read in data and prepare #####
-gba <- fread(paste0(map_data_source,"GBAPERSOON/2021/DATA/GBAPERSOON2021.csv"), sep=";",
+gba <- fread(paste0(map_data_source,"GBA_NIETGBA/GBAPERSOON2021.csv"), sep=";",
              select = c(RINPERSOONS = "character", RINPERSOON = "character", GBAGEBOORTEJAAR = "integer", GBAGESLACHT = "integer"))
 gba[, RINP := paste0(RINPERSOONS, RINPERSOON)]
 setnames(gba, 3, "birthyear")
 gba[, female := (GBAGESLACHT == 2)]
 gba[, c("RINPERSOONS", "RINPERSOON", "GBAGESLACHT") := NULL]
 
-nietgba <- fread(paste0(map_data_source,"NIETGBA/2021/DATA/NIET_GBAPERSOON.csv"), sep=";", 
+nietgba <- fread(paste0(map_data_source,"GBA_NIETGBA/NIET_GBAPERSOON.csv"), sep=";", 
                  select = c(RINPERSOONS = "character", RINPERSOON = "character", NIETGBAGEBJAAR = "integer", NIETGBAGESLACHT = "integer"))
 nietgba[, RINP := paste0(RINPERSOONS, RINPERSOON)]
 nietgba[, birthyear := as.integer(NIETGBAGEBJAAR)]

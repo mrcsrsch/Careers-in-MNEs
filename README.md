@@ -9,14 +9,14 @@ This replication package contains the scripts required to replicate the results 
 ## Folder structure
 
 - `scripts/`: Contains R and Stata code to run the analysis.
-- `source_data/`: Place the confidential source data files here (see "source data access").
 - `data/`: Stores intermediate datasets created during the analysis.
+- `data/source_data/`: Place the (confidential) source data files here (see "source data access").
 - `outputs/`: Result figures and tables for the paper will be saved here.
 
 ## Replication instructions
 
 ### Data preparation
-1. Place the worker-level source data in the `source_data/` folder.
+1. Place the worker-level source data in the `data/source_data/` folder. Make sure to also place the file `data/source_data/LOCATION/pc2020_NL_NUTS-2021_v1.0.csv`.
 2. Specify the SQL server connection for the firm-level source data in the `01_company_data.R` and `07_rob_location_experience.R` scripts (see comments in the scripts for guidance).
 3. Adjust the file paths in `00_main.R` to match your directory structure.
 

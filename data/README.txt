@@ -1,1 +1,1 @@
-Intermediate data files will be stored in this folder.
+Intermediate data files will be stored in this folder. The source data should be placed in /data/source_data/. See the overall README.

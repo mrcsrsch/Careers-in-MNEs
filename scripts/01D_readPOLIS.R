@@ -17,8 +17,8 @@ if (!dir.exists(paste0(map_data_analysis, "step1/SPOLIS_yearly/"))) dir.create(p
 # set fread paths
 get.path <- function(current_year){
   if (current_year < 2010) {
-    return(paste0(map_data_source, "POLIS/", current_year, "/DATA/POLISBUS", current_year, "BUSV1.csv"))}
-  else return(paste0(map_data_source, "POLIS/", current_year, "/DATA/SPOLISBUS", current_year, "BUSV1.csv"))
+    return(paste0(map_data_source, "POLIS/POLISBUS", current_year, "BUSV1.csv"))}
+  else return(paste0(map_data_source, "POLIS/SPOLISBUS", current_year, "BUSV1.csv"))
 }
 
 get.types <- function(current_year){

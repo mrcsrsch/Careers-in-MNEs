@@ -22,7 +22,7 @@ k <- 0
 for (current_year in 2004:2020){
   cat(paste0(Sys.time(), ": year ", current_year), "\n")
   k <-  k+1
-  DIPLOMAMBO[[k]] <- fread(paste0(map_data_source, "ONDERWIJS/DIPLOMAMBOTAB/", current_year, "/DATA/DIPLOMAMBO", current_year, "1299ANAV1.csv"))
+  DIPLOMAMBO[[k]] <- fread(paste0(map_data_source, "ONDERWIJS/DIPLOMAMBOTAB/DIPLOMAMBO", current_year, "1299ANAV1.csv"))
 }
 DIPLOMAMBO <- rbindlist(DIPLOMAMBO)
 
@@ -112,7 +112,7 @@ k <- 0
 for (current_year in 2004:2020){
   cat(paste0(Sys.time(), ": year ", current_year), "\n")
   k <-  k+1
-  DIPLOMAHO[[k]] <- fread(paste0(map_data_source, "ONDERWIJS/DIPLOMAHOTAB/", current_year, "/DATA/DIPLOMAHO", current_year, "1299ANAV1.csv"))
+  DIPLOMAHO[[k]] <- fread(paste0(map_data_source, "ONDERWIJS/DIPLOMAHOTAB/DIPLOMAHO", current_year, "1299ANAV1.csv"))
 }
 DIPLOMAHO <- rbindlist(DIPLOMAHO)
 
