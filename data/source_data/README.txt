@@ -1,1 +1,1 @@
-Place the source data files in the appropriate subfolders folder. See overall README. 
+Place the source data files in the appropriate subfolders. Note that firm-level data can be drawn from an SQL server. See overall README. 
